@@ -12,9 +12,9 @@
 ## 🔐 Login Details (If Required)
 If your project includes login, provide demo credentials:
 
-**Username / Email:** demo@gmail.com
+**Username / Email:** user@example.com
 
-**Password:** 12345
+**Password:** password123
 
 ---
 
