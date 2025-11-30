@@ -3,173 +3,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShopEasy - Your One-Stop Online Store</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <title>ShopEasy - Modern E-Commerce</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Header Section -->
+
+    <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="logo">
-                <a href="index.html">ShopEasy</a>
+                <a href="index.html">Shop<span>Easy.</span></a>
             </div>
-            <nav class="navbar">
-                <ul class="nav-menu">
-                    <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
-                    <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
+            
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="products.html" class="nav-link">Shop</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
             </nav>
-            <div class="header-actions">
-                <div class="search-box">
-                    <input type="text" placeholder="Search products...">
-                    <button class="search-btn"><i class="fas fa-search"></i></button>
+
+            <div class="header-icons">
+                <button onclick="App.toggleTheme()" class="icon-btn" title="Toggle Theme"><i class="fas fa-moon"></i></button>
+                
+                <!-- Dynamic Auth Buttons (Login/Logout) -->
+                <div id="auth-buttons" style="display:contents"></div>
+
+                <a href="cart.html" class="icon-btn" title="Cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+
+                <div class="hamburger">
+                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
                 </div>
-                <div class="user-actions">
-                    <a href="#" class="user-icon"><i class="fas fa-user"></i></a>
-                    <a href="cart.html" class="cart-icon">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="cart-count">0</span>
-                    </a>
-                </div>
-            </div>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Summer Collection 2023</h1>
-            <p class="hero-subtitle">Discover the latest trends in fashion and electronics</p>
-            <a href="products.html" class="btn btn-primary">Shop Now</a>
+    <!-- Hero Slider -->
+    <section class="hero-slider">
+        <!-- Slide 1 -->
+        <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1600&q=80');">
+            <div class="container hero-content">
+                <h2>New Arrivals</h2>
+                <h1>Summer Collection <br> 2025</h1>
+                <p>Discover the latest trends in fashion with our exclusive summer collection. Up to 50% off on selected items.</p>
+                <a href="products.html" class="btn btn-primary">Shop Now</a>
+            </div>
         </div>
-        <div class="hero-image">
-            <img src="images/hero-bg.jpg" alt="Summer Collection">
+        <!-- Slide 2 -->
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1600&q=80');">
+            <div class="container hero-content">
+                <h2>Tech & Gadgets</h2>
+                <h1>Next Gen <br> Electronics</h1>
+                <p>Upgrade your lifestyle with our premium selection of smart gadgets and accessories.</p>
+                <a href="products.html" class="btn btn-primary">Explore Tech</a>
+            </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1618220179428-22790b461013?w=1600&q=80');">
+            <div class="container hero-content">
+                <h2>Home & Living</h2>
+                <h1>Modern <br> Essentials</h1>
+                <p>Transform your living space with our curated collection of modern furniture and decor.</p>
+                <a href="products.html" class="btn btn-primary">Shop Home</a>
+            </div>
         </div>
     </section>
 
-    <!-- Featured Categories -->
-    <section class="categories">
+    <!-- Why Choose Us -->
+    <section class="section-padding">
         <div class="container">
-            <h2 class="section-title">Shop by Category</h2>
-            <div class="category-grid">
-                <div class="category-card">
-                    <div class="category-icon">
-                        <i class="fas fa-tshirt"></i>
-                    </div>
-                    <h3>Fashion</h3>
-                    <p>Latest trends in clothing</p>
-                    <a href="products.html?category=fashion" class="category-link">Explore</a>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <i class="fas fa-truck feature-icon"></i>
+                    <h3>Free Shipping</h3>
+                    <p>On all orders over $99. Fast and reliable delivery worldwide.</p>
                 </div>
-                <div class="category-card">
-                    <div class="category-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>Electronics</h3>
-                    <p>Smartphones & gadgets</p>
-                    <a href="products.html?category=electronics" class="category-link">Explore</a>
+                <div class="feature-box">
+                    <i class="fas fa-shield-alt feature-icon"></i>
+                    <h3>Secure Payment</h3>
+                    <p>100% secure payment processing with modern encryption.</p>
                 </div>
-                <div class="category-card">
-                    <div class="category-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3>Home & Kitchen</h3>
-                    <p>Everything for your home</p>
-                    <a href="products.html?category=home" class="category-link">Explore</a>
+                <div class="feature-box">
+                    <i class="fas fa-undo feature-icon"></i>
+                    <h3>30 Day Returns</h3>
+                    <p>Not satisfied? Return it within 30 days for a full refund.</p>
                 </div>
-                <div class="category-card">
-                    <div class="category-icon">
-                        <i class="fas fa-heartbeat"></i>
-                    </div>
-                    <h3>Health & Beauty</h3>
-                    <p>Look good, feel great</p>
-                    <a href="products.html?category=beauty" class="category-link">Explore</a>
+                <div class="feature-box">
+                    <i class="fas fa-headset feature-icon"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Our dedicated support team is always here to help you.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="featured-products">
+    <!-- Featured Products -->
+    <section class="section-padding" style="background: var(--white);">
         <div class="container">
-            <h2 class="section-title">Featured Products</h2>
-            <!-- Just keep this empty div, JS fills it -->
-            <div class="products-grid" id="featured-products"></div>
+            <div class="section-title">
+                <h2>Featured Products</h2>
+                <p>Handpicked best sellers just for you</p>
+            </div>
             
-            <!-- The JS setupLoadMore() function will insert the button here -->
+            <div class="products-grid" id="featured-products">
+                <!-- Javascript will inject products here -->
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="products.html" class="btn btn-primary">View All Products</a>
+            </div>
         </div>
     </section>
 
-    <!-- Newsletter Section -->
-    <section class="newsletter">
+    <!-- Testimonials -->
+    <section class="section-padding">
         <div class="container">
-            <div class="newsletter-content">
-                <h2>Subscribe to Our Newsletter</h2>
-                <p>Get the latest updates on new products and upcoming sales</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Your email address" required>
-                    <button type="submit" class="btn btn-primary">Subscribe</button>
-                </form>
+            <div class="section-title">
+                <h2>What Our Customers Say</h2>
+                <p>Real feedback from real customers</p>
             </div>
+
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="user-profile">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="user-img" alt="User">
+                        <div class="user-info">
+                            <h4>Sarah Jenkins</h4>
+                            <span>Fashion Blogger</span>
+                        </div>
+                    </div>
+                    <p class="quote">"Absolutely love the quality of the clothes. The delivery was super fast and the packaging was eco-friendly!"</p>
+                    <div class="rating"><i class="fas fa-star"></i> 5.0</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="user-profile">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="user-img" alt="User">
+                        <div class="user-info">
+                            <h4>Mike Ross</h4>
+                            <span>Tech Enthusiast</span>
+                        </div>
+                    </div>
+                    <p class="quote">"The electronics section is a goldmine. Bought noise-cancelling headphones and they are better than described."</p>
+                    <div class="rating"><i class="fas fa-star"></i> 4.8</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="user-profile">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" class="user-img" alt="User">
+                        <div class="user-info">
+                            <h4>Emily Blunt</h4>
+                            <span>Interior Designer</span>
+                        </div>
+                    </div>
+                    <p class="quote">"ShopEasy is my go-to for home decor items. The prices are reasonable and the designs are very modern."</p>
+                    <div class="rating"><i class="fas fa-star"></i> 5.0</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="section-padding" style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: white; text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 32px; margin-bottom: 20px;">Subscribe to our Newsletter</h2>
+            <p style="margin-bottom: 30px; opacity: 0.9;">Get updates on new arrivals and exclusive offers directly to your inbox.</p>
+            <form style="max-width: 500px; margin: 0 auto; display: flex; gap: 10px;">
+                <input type="email" placeholder="Your email address" style="flex: 1; padding: 15px; border-radius: 50px; border: none; outline: none;">
+                <button type="submit" style="background: var(--text-main); color: white; padding: 15px 30px; border-radius: 50px; font-weight: 600;">Subscribe</button>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>ShopEasy</h3>
-                    <p>Your one-stop destination for all your shopping needs. Quality products at affordable prices.</p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>ShopEasy.</h3>
+                    <p>Your premium destination for fashion, technology, and home essentials. We bring quality to your doorstep.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
+                        <li><a href="products.html">Shop</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Customer Service</h4>
+                <div class="footer-col">
+                    <h3>Customer Care</h3>
                     <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Shipping Policy</a></li>
-                        <li><a href="#">Returns & Refunds</a></li>
-                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Order Tracking</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Street, City, Country</li>
-                        <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
-                        <li><i class="fas fa-envelope"></i> info@shopeasy.com</li>
-                    </ul>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Fashion St, New York, NY</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
+                    <p><i class="fas fa-envelope"></i> support@shopeasy.com</p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 ShopEasy. All rights reserved.</p>
+            <div class="copyright">
+                <p>&copy; 2025 ShopEasy. All Rights Reserved. Designed for Netlify.</p>
             </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
-    <script src="js/animations.js"></script>
 </body>
 </html>

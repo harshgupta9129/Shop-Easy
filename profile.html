@@ -2,116 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profile - ShopEasy</title>
+    <title>Profile</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header Placeholder (Populated by JS) -->
     <header class="header">
         <div class="container">
-            <div class="logo"><a href="index.html">ShopEasy</a></div>
-            <nav class="navbar">
-                <ul class="nav-menu">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
-                </ul>
-            </nav>
-            <div class="header-actions">
-                <!-- User Actions injected by main.js -->
-                <div class="user-actions"></div> 
-            </div>
+            <div class="logo"><a href="index.html">ShopEasy.</a></div>
+            <div class="header-actions"><div class="user-actions"></div></div>
         </div>
     </header>
 
-    <section class="profile-section" style="padding: 60px 0;">
-        <div class="container">
-            <div class="profile-layout">
-                <!-- Sidebar -->
-                <aside class="profile-sidebar">
-                    <div class="user-badge">
-                        <div class="avatar-circle">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <h3 id="profile-name">Loading...</h3>
-                        <p id="profile-email">Loading...</p>
-                    </div>
-                    <nav class="profile-nav">
-                        <button class="profile-tab-btn active" data-target="dashboard">
-                            <i class="fas fa-tachometer-alt"></i> Dashboard
-                        </button>
-                        <button class="profile-tab-btn" data-target="orders">
-                            <i class="fas fa-box-open"></i> Order History
-                        </button>
-                        <button class="profile-tab-btn" data-target="settings">
-                            <i class="fas fa-cog"></i> Settings
-                        </button>
-                        <button class="profile-tab-btn logout-btn" onclick="logout()">
-                            <i class="fas fa-sign-out-alt"></i> Logout
-                        </button>
-                    </nav>
-                </aside>
-
-                <!-- Content Area -->
-                <main class="profile-content">
-                    
-                    <!-- Dashboard Tab -->
-                    <div id="dashboard" class="profile-pane active fade-in">
-                        <h2>My Dashboard</h2>
-                        <div class="stats-grid">
-                            <div class="stat-card">
-                                <h3>Total Orders</h3>
-                                <p class="stat-number" id="total-orders-count">0</p>
-                            </div>
-                            <div class="stat-card">
-                                <h3>Total Spent</h3>
-                                <p class="stat-number" id="total-spent-amount">$0.00</p>
-                            </div>
-                            <div class="stat-card">
-                                <h3>Member Since</h3>
-                                <p class="stat-number" id="member-since-date">2023</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Orders Tab -->
-                    <div id="orders" class="profile-pane fade-in">
-                        <h2>Order History</h2>
-                        <div class="orders-list" id="orders-container">
-                            <!-- Orders injected via JS -->
-                            <p>No orders found.</p>
-                        </div>
-                    </div>
-
-                    <!-- Settings Tab -->
-                    <div id="settings" class="profile-pane fade-in">
-                        <h2>Account Settings</h2>
-                        <form id="profile-form" class="checkout-form">
-                            <div class="form-group">
-                                <label>Full Name</label>
-                                <input type="text" id="edit-name" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label>Email Address</label>
-                                <input type="email" id="edit-email" class="form-control" disabled style="background:#f0f0f0;">
-                                <small>Email cannot be changed.</small>
-                            </div>
-                            <div class="form-group">
-                                <label>New Password (Optional)</label>
-                                <input type="password" id="edit-password" class="form-control" placeholder="Leave blank to keep current">
-                            </div>
-                            <button type="submit" class="btn btn-primary">Save Changes</button>
-                        </form>
-                    </div>
-
-                </main>
-            </div>
+    <div class="container" style="padding: 40px 20px;">
+        <div style="background: var(--white); padding: 30px; border-radius: 8px; box-shadow: var(--shadow); margin-bottom: 30px;">
+            <h1>My Profile</h1>
+            <p><i class="fas fa-user"></i> <span id="profile-name"></span></p>
+            <p><i class="fas fa-envelope"></i> <span id="profile-email"></span></p>
+            <p>Total Orders: <span id="total-orders"></span></p>
         </div>
-    </section>
 
+        <h2>Order History</h2>
+        <div id="orders-list"></div>
+    </div>
     <script src="js/main.js"></script>
 </body>
 </html>

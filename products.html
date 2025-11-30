@@ -3,144 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - ShopEasy</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <title>All Products - ShopEasy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Header (same as index.html) -->
+    <!-- Header (Same as Index) -->
     <header class="header">
         <div class="container">
-            <div class="logo">
-                <a href="index.html">ShopEasy</a>
-            </div>
-            <nav class="navbar">
-                <ul class="nav-menu">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="products.html" class="nav-link active">Products</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
+            <div class="logo"><a href="index.html">Shop<span>Easy.</span></a></div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link active">Shop</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
             </nav>
-            <div class="header-actions">
-                <div class="search-box">
-                    <input type="text" placeholder="Search products...">
-                    <button class="search-btn"><i class="fas fa-search"></i></button>
-                </div>
-                <div class="user-actions">
-                    <a href="#" class="user-icon"><i class="fas fa-user"></i></a>
-                    <a href="cart.html" class="cart-icon">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="cart-count">0</span>
-                    </a>
-                </div>
-            </div>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <div class="header-icons">
+                <button onclick="App.toggleTheme()" class="icon-btn"><i class="fas fa-moon"></i></button>
+                <div id="auth-buttons" style="display:contents"></div>
+                <a href="cart.html" class="icon-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+                <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
             </div>
         </div>
     </header>
 
-    <!-- Products Page Content -->
-    <section class="page-header">
-        <div class="container">
-            <h1>Our Products</h1>
-            <p>Discover our wide range of products</p>
+    <!-- Page Title -->
+    <section class="section-padding" style="background: var(--bg-light); padding: 40px 0;">
+        <div class="container text-center">
+            <h1 style="font-size: 32px; margin-bottom: 10px;">Our Collection</h1>
+            <p>Browse our extensive range of premium products</p>
         </div>
     </section>
 
-    <section class="products-section">
+    <!-- Products Grid -->
+    <section class="section-padding">
         <div class="container">
-            <div class="products-filter">
-                <div class="filter-options">
-                    <div class="filter-group">
-                        <label for="category">Category:</label>
-                        <select id="category">
-                            <option value="all">All Categories</option>
-                            <option value="fashion">Fashion</option>
-                            <option value="electronics">Electronics</option>
-                            <option value="home">Home & Kitchen</option>
-                            <option value="beauty">Health & Beauty</option>
-                        </select>
-                    </div>
-                    <div class="filter-group">
-                        <label for="sort">Sort by:</label>
-                        <select id="sort">
-                            <option value="default">Default</option>
-                            <option value="price-low">Price: Low to High</option>
-                            <option value="price-high">Price: High to Low</option>
-                            <option value="name">Name</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="view-options">
-                    <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
-                    <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
-                </div>
+            <!-- Filter Bar -->
+            <div style="display: flex; justify-content: space-between; margin-bottom: 30px; flex-wrap: wrap; gap: 15px;">
+                <select style="padding: 10px; border-radius: var(--radius); border: 1px solid #ddd;">
+                    <option value="all">All Categories</option>
+                    <option value="fashion">Fashion</option>
+                    <option value="tech">Electronics</option>
+                </select>
+                <select style="padding: 10px; border-radius: var(--radius); border: 1px solid #ddd;">
+                    <option value="default">Sort By: Default</option>
+                    <option value="low">Price: Low to High</option>
+                    <option value="high">Price: High to Low</option>
+                </select>
             </div>
-            <div class="products-grid" id="products-container">
-                <!-- Products will be loaded via JavaScript -->
-            </div>
-            <div class="pagination">
-                <button class="page-btn" id="prev-page">Previous</button>
-                <div class="page-numbers" id="page-numbers"></div>
-                <button class="page-btn" id="next-page">Next</button>
+
+            <div class="products-grid" id="all-products-container">
+                <!-- Injected via JS -->
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer (Same as Index) -->
     <footer class="footer">
+        <!-- Copy Footer content from index.html -->
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>ShopEasy</h3>
-                    <p>Your one-stop destination for all your shopping needs. Quality products at affordable prices.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Customer Service</h4>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Shipping Policy</a></li>
-                        <li><a href="#">Returns & Refunds</a></li>
-                        <li><a href="#">Track Order</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Street, City, Country</li>
-                        <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
-                        <li><i class="fas fa-envelope"></i> info@shopeasy.com</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 ShopEasy. All rights reserved.</p>
-            </div>
+             <div class="copyright"> <p>&copy; 2025 ShopEasy. All Rights Reserved.</p> </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
-    <script src="js/animations.js"></script>
 </body>
 </html>
