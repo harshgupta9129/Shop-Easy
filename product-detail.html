@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - ShopEasy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">ShopEasy</a>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Search products...">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-actions">
+                    <a href="#" class="user-icon"><i class="fas fa-user"></i></a>
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail-section">
+        <div class="container">
+            <div class="product-detail">
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img src="images/products/smartphone.jpg" alt="Smartphone Pro Max" id="main-image">
+                    </div>
+                    <div class="thumbnail-gallery">
+                        <div class="thumbnail active" data-image="images/products/smartphone.jpg">
+                            <img src="images/products/smartphone.jpg" alt="Smartphone Front">
+                        </div>
+                        <div class="thumbnail" data-image="images/products/smartphone-2.jpg">
+                            <img src="images/products/smartphone-2.jpg" alt="Smartphone Back">
+                        </div>
+                        <div class="thumbnail" data-image="images/products/smartphone-3.jpg">
+                            <img src="images/products/smartphone-3.jpg" alt="Smartphone Side">
+                        </div>
+                        <div class="thumbnail" data-image="images/products/smartphone-4.jpg">
+                            <img src="images/products/smartphone-4.jpg" alt="Smartphone Features">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-info">
+                    <h1>Smartphone Pro Max</h1>
+                    <div class="product-rating-price">
+                        <div class="rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="review-count">(256 reviews)</span>
+                        </div>
+                        <div class="price">$999.99</div>
+                    </div>
+                    
+                    <div class="product-description">
+                        <p>The latest smartphone with advanced camera system, powerful performance, and all-day battery life. Experience the future of mobile technology with stunning display and innovative features.</p>
+                    </div>
+                    
+                    <div class="product-options">
+                        <div class="option-group">
+                            <label>Color:</label>
+                            <div class="color-options">
+                                <div class="color-option active" data-color="black">Black</div>
+                                <div class="color-option" data-color="silver">Silver</div>
+                                <div class="color-option" data-color="blue">Blue</div>
+                                <div class="color-option" data-color="gold">Gold</div>
+                            </div>
+                        </div>
+                        
+                        <div class="option-group">
+                            <label>Storage:</label>
+                            <div class="size-options">
+                                <div class="size-option active" data-size="128gb">128GB</div>
+                                <div class="size-option" data-size="256gb">256GB</div>
+                                <div class="size-option" data-size="512gb">512GB</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="quantity-selector">
+                        <label>Quantity:</label>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus-btn"><i class="fas fa-minus"></i></button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="10">
+                            <button class="quantity-btn plus-btn"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <button class="btn btn-primary add-to-cart-btn">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                        <button class="wishlist-btn">
+                            <i class="far fa-heart"></i> Add to Wishlist
+                        </button>
+                    </div>
+                    
+                    <div class="product-features">
+                        <div class="feature">
+                            <i class="fas fa-shipping-fast"></i>
+                            <span>Free Shipping</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-undo"></i>
+                            <span>30-Day Returns</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>2-Year Warranty</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product Tabs -->
+            <div class="product-tabs">
+                <div class="tabs">
+                    <button class="tab active" data-tab="description">Description</button>
+                    <button class="tab" data-tab="specifications">Specifications</button>
+                    <button class="tab" data-tab="reviews">Reviews</button>
+                    <button class="tab" data-tab="shipping">Shipping</button>
+                </div>
+                
+                <div class="tab-content active" id="description">
+                    <h3>Product Description</h3>
+                    <p>Experience the ultimate in smartphone technology with the Smartphone Pro Max. This device combines cutting-edge features with elegant design to deliver an unparalleled user experience.</p>
+                    
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>6.7-inch Super Retina XDR display</li>
+                        <li>Triple 12MP camera system with Night mode</li>
+                        <li>A15 Bionic chip with next-generation Neural Engine</li>
+                        <li>5G capable for superfast downloads and streaming</li>
+                        <li>All-day battery life with fast charging</li>
+                        <li>Ceramic Shield front cover for superior durability</li>
+                        <li>IP68 water and dust resistance</li>
+                    </ul>
+                </div>
+                
+                <div class="tab-content" id="specifications">
+                    <h3>Technical Specifications</h3>
+                    <table class="specs-table">
+                        <tr>
+                            <th>Display</th>
+                            <td>6.7-inch Super Retina XDR</td>
+                        </tr>
+                        <tr>
+                            <th>Processor</th>
+                            <td>A15 Bionic chip</td>
+                        </tr>
+                        <tr>
+                            <th>Storage</th>
+                            <td>128GB / 256GB / 512GB</td>
+                        </tr>
+                        <tr>
+                            <th>Camera</th>
+                            <td>Triple 12MP (Wide, Ultra Wide, Telephoto)</td>
+                        </tr>
+                        <tr>
+                            <th>Battery</th>
+                            <td>Up to 28 hours video playback</td>
+                        </tr>
+                        <tr>
+                            <th>Connectivity</th>
+                            <td>5G, Wi-Fi 6, Bluetooth 5.0</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="tab-content" id="reviews">
+                    <h3>Customer Reviews</h3>
+                    <div class="reviews-summary">
+                        <div class="overall-rating">
+                            <div class="rating-score">4.8</div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <div class="total-reviews">Based on 256 reviews</div>
+                        </div>
+                    </div>
+                    
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-name">John D.</div>
+                            <div class="review-date">March 15, 2023</div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="review-content">
+                            <p>Absolutely love this phone! The camera quality is incredible and battery life lasts all day. Highly recommend!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-name">Sarah M.</div>
+                            <div class="review-date">March 10, 2023</div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="review-content">
+                            <p>Great phone overall. The display is stunning and performance is smooth. Only minor complaint is the weight.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="shipping">
+                    <h3>Shipping Information</h3>
+                    <p>We offer fast and reliable shipping options to get your products to you as quickly as possible.</p>
+                    
+                    <h4>Shipping Options:</h4>
+                    <ul>
+                        <li><strong>Standard Shipping:</strong> 3-5 business days - FREE on orders over $50</li>
+                        <li><strong>Express Shipping:</strong> 2 business days - $9.99</li>
+                        <li><strong>Overnight Shipping:</strong> Next business day - $19.99</li>
+                    </ul>
+                    
+                    <h4>International Shipping:</h4>
+                    <p>We ship to over 50 countries worldwide. International shipping costs and delivery times vary by location.</p>
+                </div>
+            </div>
+            
+            <!-- Related Products -->
+            <div class="related-products">
+                <h2 class="section-title">You May Also Like</h2>
+                <div class="products-grid" id="related-products">
+                    <!-- Related products will be loaded via JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ShopEasy</h3>
+                    <p>Your one-stop destination for all your shopping needs. Quality products at affordable prices.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                        <li><a href="#">Track Order</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Street, City, Country</li>
+                        <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+                        <li><i class="fas fa-envelope"></i> info@shopeasy.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 ShopEasy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script>
+        // Product Detail Page Specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeProductDetailPage();
+        });
+
+        function initializeProductDetailPage() {
+            // Thumbnail click event
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            const mainImage = document.getElementById('main-image');
+            
+            thumbnails.forEach(thumb => {
+                thumb.addEventListener('click', function() {
+                    thumbnails.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    mainImage.src = this.dataset.image;
+                });
+            });
+
+            // Quantity controls
+            const minusBtn = document.querySelector('.minus-btn');
+            const plusBtn = document.querySelector('.plus-btn');
+            const quantityInput = document.querySelector('.quantity-input');
+            
+            minusBtn.addEventListener('click', function() {
+                let value = parseInt(quantityInput.value);
+                if (value > 1) {
+                    quantityInput.value = value - 1;
+                }
+            });
+            
+            plusBtn.addEventListener('click', function() {
+                let value = parseInt(quantityInput.value);
+                if (value < 10) {
+                    quantityInput.value = value + 1;
+                }
+            });
+
+            // Tab switching
+            const tabs = document.querySelectorAll('.tab');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const tabId = this.dataset.tab;
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tabContents.forEach(c => c.classList.remove('active'));
+                    this.classList.add('active');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+
+            // Add to cart button
+            const addToCartBtn = document.querySelector('.add-to-cart-btn');
+            addToCartBtn.addEventListener('click', function() {
+                const quantity = parseInt(quantityInput.value);
+                const productId = 3;
+                ecommerce.addToCart(productId, quantity);
+                
+                // Show success animation
+                this.innerHTML = '<i class="fas fa-check"></i> Added to Cart';
+                this.style.backgroundColor = '#28a745';
+                
+                setTimeout(() => {
+                    this.innerHTML = '<i class="fas fa-shopping-cart"></i> Add to Cart';
+                    this.style.backgroundColor = '';
+                }, 2000);
+            });
+
+            // Color and size options
+            const colorOptions = document.querySelectorAll('.color-option');
+            const sizeOptions = document.querySelectorAll('.size-option');
+            
+            colorOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    colorOptions.forEach(o => o.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+            
+            sizeOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    sizeOptions.forEach(o => o.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // Load related products
+            loadRelatedProducts();
+        }
+
+        function loadRelatedProducts() {
+            const relatedContainer = document.getElementById('related-products');
+            if (!relatedContainer) return;
+            
+            // Filter related products (excluding current product)
+            const relatedProducts = products.filter(p => p.id !== 3).slice(0, 4);
+            
+            relatedContainer.innerHTML = relatedProducts.map(product => `
+                <div class="product-card" data-id="${product.id}">
+                    <div class="product-image">
+                        <img src="${product.image}" alt="${product.name}" onerror="this.src='images/placeholder.jpg'">
+                        ${product.badge ? `<span class="product-badge">${product.badge}</span>` : ''}
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">${product.category}</div>
+                        <h3 class="product-title">${product.name}</h3>
+                        <div class="product-rating">
+                            ${generateStarRating(product.rating)}
+                            <span>(${product.reviews})</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$${product.price.toFixed(2)}</span>
+                            ${product.originalPrice ? `<span class="original-price">$${product.originalPrice.toFixed(2)}</span>` : ''}
+                        </div>
+                        <button class="add-to-cart btn btn-primary">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+            
+            // Add event listeners to related product add-to-cart buttons
+            relatedContainer.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const productId = parseInt(this.closest('.product-card').dataset.id);
+                    ecommerce.addToCart(productId);
+                });
+            });
+        }
+    </script>
+</body>
+</html>
